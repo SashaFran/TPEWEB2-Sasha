@@ -1,0 +1,51 @@
+html{
+  font-family:sans-serif;
+}
+.Navegador{
+  border-bottom: 7px solid orange;
+  background-color: gray;
+  margin: 10px;
+
+}
+
+.nav-link, .nav-item{
+
+  color: white;
+  font-size: 25px;
+  padding: 20px;
+}
+#dropdownMenuButton{
+  font-size: 25px;
+  background-color: gray;
+}
+.nav-link:hover{
+  color: white;
+}
+#Cuerpo{
+  padding: 30px 35px 15px 35px;
+  background-color: lightgray;
+  height: 100% auto;
+  font-size: 20px;
+}
+.row{
+  padding: 0 20px 0 30px;
+}
+.container{
+  background-color: lightgray;
+  margin: 0 auto;
+}
+#foto1, #fotodos{
+  height: 30%;
+
+}
+#Redsocial{
+  width: 20px;
+  margin: 8px;
+
+}
+.footer{
+  background-color: gray;
+  font-size: 15px;
+  height: 60px;
+  margin: 10px;
+}
