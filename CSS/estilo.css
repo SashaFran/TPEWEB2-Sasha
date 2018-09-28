@@ -1,5 +1,5 @@
-html{
-  font-family:sans-serif;
+  html{
+  font-family: inherit;
 }
 .Navegador{
   border-bottom: 7px solid orange;
@@ -37,6 +37,15 @@ html{
 #foto1, #fotodos{
   height: 30%;
 
+}
+#tabla{
+  background-color: lightgray;
+  text-align: left;
+  margin: 0 auto;
+
+}
+.destacado{
+  text-align: left;
 }
 #Redsocial{
   width: 20px;

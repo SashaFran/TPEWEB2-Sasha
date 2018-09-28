@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 19, 2018 at 08:28 PM
+-- Generation Time: Sep 20, 2018 at 07:18 AM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -61,7 +61,7 @@ CREATE TABLE `juego` (
 --
 
 INSERT INTO `juego` (`ID_Genero`, `ID_Juego`, `Titulo`, `Descripcion`, `Precio`) VALUES
-(1, 1, 'Beyond two', 'Jodie Holmes nació con un don especial: ha vivido toda su vida vinculada a una entidad llamada Aiden, un ser inmaterial con poderes telequinéticos que además hizo que Jodie tuviera contactos con el mundo de los espíritus. ', 200),
+(1, 1, 'Beyond two Souls', 'Jodie Holmes nació con un don especial: ha vivido toda su vida vinculada a una entidad llamada Aiden, un ser inmaterial con poderes telequinéticos que además hizo que Jodie tuviera contactos con el mundo de los espíritus. ', 200),
 (1, 2, 'God of War', 'Se basa en las aventuras de un semidiós espartano, Kratos, quién se enfrenta a diversos personajes de la mitología griega, tanto héroes y especies mitológicas como dioses griegos y dioses primordiales. Aunque el guerrero espartano acostumbra enemistad con la mayoría de los Dioses, recibe ayuda de muchos de ellos, en especial de Atenea.', 250),
 (1, 3, 'Shadow of Colossus', 'El juego trata de un joven conocido únicamente como Wander, que debe viajar a caballo a través de un vasto territorio y derrotar a 16 gigantes, conocidos colectivamente como «Colossi» («colosos» en español) para devolver la vida a una joven llamada Mono. ', 210),
 (2, 4, 'GTA V', 'La historia transcurre en la remodelada ciudad de Los Santos, donde Michael, Trevor y Franklin trabajan individualmente hasta que se cruzan sus vidas y empiezan a trabajar en equipo robando bancos o realizando trabajos para diversos personajes.', 250),
