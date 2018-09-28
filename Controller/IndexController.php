@@ -28,6 +28,7 @@ class Indexcontroller
 
     ----- = $this->model->GetJuegos();
     $this->view->Mostrar($this->Titulo, ----);
+    //No creo que this->model->GetJuegos(); sea necesario. Porque no aparece en el home
   }
 }
 
