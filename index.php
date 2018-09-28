@@ -1,11 +1,18 @@
 <?php
-include ("Route/traertodo.php")
+require_once "Route/Edicion.php";
+
+function Home(){
+  $Titulo = "Venta de VideoJugos";
+}
+
+//si lo cierro abajo del todo, no me toma nada y me muestra una pagina en blanco.
  ?>
+
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8" />
-  <title> DigitalGames.com</title>
+  <title> <?php Home() ?></title>
   <link rel="stylesheet" type="text/css" href="CSS\estilo.css" >
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <meta charset="utf-8">
@@ -18,16 +25,25 @@ include ("Route/traertodo.php")
     <a class="nav-link" href="index.php" id="Home">Home</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Informacion</a>
-  </li>
-  <li class="nav-item">
     <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Categoria </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <a class="dropdown-item" href="#" id="Accion">Accion</a>
     <a class="dropdown-item" href="#" id="Aventura">Aventura</a>
     <a class="dropdown-item" href="#" id="Terror">Terror</a>
+    <a class="dropdown-item" href="#" id="Traertodo">Traer todo</a>
   </div>
+</div>
+</li>
+<li class="nav-item">
+  <div class="dropdown">
+<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Consola </button>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <a class="dropdown-item" href="#" id="PS3">PS3</a>
+  <a class="dropdown-item" href="#" id="PS4">PS4</a>
+  <a class="dropdown-item" href="#" id="PC">PC</a>
+    <a class="dropdown-item" href="#" id="Traertodo1">Traer todo</a>
+</div>
 </div>
 </li>
  <li class="nav-item">
@@ -57,9 +73,7 @@ include ("Route/traertodo.php")
 </div>
 
 <div class="container">
-  <?php
 
-   ?>
 </div>
 <div class="footer">
 <nav class="nav nav-pills nav-fill">
