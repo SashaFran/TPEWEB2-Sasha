@@ -10,6 +10,8 @@ document.getElementById('Traertodo1').addEventListener('click', Traertodo1);
 document.getElementById('PS4').addEventListener('click', playcuatro);
 document.getElementById('PS3').addEventListener('click', playtres);
 document.getElementById('PC').addEventListener('click', pc);
+
+
 function Inicio(){
   let contenedor = document.querySelector('.contenedor');
   fetch("HTML/Inicio.html",{

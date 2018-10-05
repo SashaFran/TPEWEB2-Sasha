@@ -3,7 +3,7 @@
 
 $db = new PDO('mysql:host=localhost;'.'dbname=videojuegos;charset=utf8', 'root', '');
 
-  $sentencia = $db->prepare( "select * FROM juego WHERE juego.ID_Genero = 1");
+  $sentencia = $db->prepare( "select * FROM juego WHERE juego.ID_Genero = 2");
   $sentencia -> execute();
 
 

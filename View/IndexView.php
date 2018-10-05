@@ -1,21 +1,13 @@
 <?php
-/**
- *
- */
+echo phpinfo();
  //Es una buena practica que la clase se llame
  //igual al archivo
-class IndexView
-{
-
-  function __construct(argument)
-  {
-    // code...
-  }
+class IndexView{
 
 //Como viene de la clase "Juegos", no es necesario aclarar que se va a mostrar los juegos.
   function Mostrar($Titulo){
       //$Titulo = "Venta de VideoJugos";
-    ?>
+      ?>
     <!DOCTYPE html>
     <html>
     <head>
@@ -58,7 +50,7 @@ class IndexView
        <div class="dropdown">
      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Sign In</i> </button>
      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-       <form action="admi.php" method="get">
+       <form action="./View/AdmiView.php" method="get">
        <li>Documento: <input id="input" type="number" name="Documento" /></li>
        <li>Contraseña: <input type="text" name="Contraseña" /></li>
        <li><input type="submit" value="Sign in"></li>
@@ -97,6 +89,7 @@ class IndexView
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </body>
     </html>
+    <?php
   }
 }
 

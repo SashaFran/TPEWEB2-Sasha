@@ -32,7 +32,7 @@ function Connect(){
    $db = Connect();
    $sentencia = $db->prepare("INSERT INTO juego(Titulo,ID_Genero,Descripcion,Precio,ID_Consola) VALUES (?,?,?,?,?)" );
    $sentencia->execute(array($Titulo,$ID_Genero,$Descripcion,$Precio,$ID_Consola));
-  // header("Location:  http://".$_SERVER["SERVER_NAME"]. dirname($_SERVER["PHP_SELF"]));
+//  header("Location:  http://".$_SERVER["SERVER_NAME"]. dirname($_SERVER["PHP_SELF"]));
  }//El header me tira error de linea.
 
 function BorrarJuego($ID_Juego){
@@ -48,7 +48,7 @@ function BorrarJuego($ID_Juego){
   }
 
 function EditarJuego(){
-  $Titulo =  isset($_POST["inputTITULOedit"]);
+  $Titulo =  isset($_GET["inputTITULOedit"]);
   $Descripcion = isset($_GET["inputDESCRIPCIONedit"]);
   $Precio = isset($_GET["inputPRECIOedit"]);
   $ID_Genero  = isset($_GET["inputGENEROedit"]);
