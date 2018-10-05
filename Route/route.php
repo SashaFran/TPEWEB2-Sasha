@@ -6,7 +6,7 @@ require_once "Controller/IndexController.php"
 
 
 
-$controller = new IndexController();
+$controller = new AdmiController();
 $partesURL = explote ('/', $_GET['action']);
 
 
@@ -20,6 +20,13 @@ if ($partesURL[0] == '']) {
       BorrarJuego($partesURL [1]);
     }elseif ($partesURL [0] == 'Editar') {
       EditarJuego($partesURL [1]);
-    }
+    }elseif ($partesURL [0] == 'GENEROeditar') {
+      EditarGenero($partesURL [1]);
+    }elseif ($partesURL [0] == 'GENEROagregar') {
+      AgregarGenero($partesURL [1]);
+    }elseif ($partesURL [0] == 'GENEROborrar') {
+      BorrarGenero($partesURL [1]);
+
+
 }
 ?>

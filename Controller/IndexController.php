@@ -4,7 +4,6 @@ require_once "../view/IndexView.php"
 //solicita IndexView ya que vamos a trabajar en paralelo
 require_once  "../Model/IndexModel.php"
 
-
 class Indexcontroller
 {
   private $view;
@@ -25,11 +24,10 @@ class Indexcontroller
 
   function Home(){
 //use PartialRender, por consguiente mi index no tiene variables extras.
-
-    ----- = $this->model->GetJuegos();
-    $this->view->Mostrar($this->Titulo, ----);
+    $this->view->Mostrar($this->Titulo);
     //No creo que this->model->GetJuegos(); sea necesario. Porque no aparece en el home
   }
-}
 
+
+}
  ?>
