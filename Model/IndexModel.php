@@ -11,7 +11,7 @@ function __construct(){
 
   }
 
-  //se contecta, hace la consulta y retorna los juegos
+  //se coneecta, hace la consulta y retorna los juegos
 private function Connect(){
 
   return new PDO('mysql:host=localhost;' . 'dbname=videojuegos;charset=utf8' , 'root' , '');
