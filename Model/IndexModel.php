@@ -5,39 +5,36 @@ class IndexModel{
   private $db;
 
 
-function __construct(){
-
-  $this->db = Connect();
-
+function __construct()
+  {
+  $this->db = $this->Connect();
   }
 
   //se coneecta, hace la consulta y retorna los juegos
-private function Connect(){
-
+private function Connect()
+  {
   return new PDO('mysql:host=localhost;' . 'dbname=videojuegos;charset=utf8' , 'root' , '');
-
-    }
+  }
 
 Function GetJuegos(){
       $db = Connect();
       $Titulo = "Bienvenido Administrador: ";
       $sentencia = $db->prepare( "SELECT * FROM juego");
       $sentencia -> execute();
-      $Juegos = $sentencia->fetchAll(PDO::FETCH_ASSOC)){
-      echo ('<li class="list-group-item">'."Numero de 'ID': ". $Juegos["ID_Juego"]."</br>" ."Titulo: " . $Juegos["Titulo"]."</br>" . "Descripcion: ". $Juegos["Descripcion"]."</br>"."Precio: $" . $Juegos["Precio"]."</br>" .$Juegos["ID_Juego"]."</br>". $Juegos["Genero"]> . '</li>'");
+      $Juegos = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+      //echo ('<li class="list-group-item">'."Numero de 'ID': ". $Juegos["ID_Juego"]."</br>" ."Titulo: " . $Juegos["Titulo"]."</br>" . "Descripcion: ". $Juegos["Descripcion"]."</br>"."Precio: $" . $Juegos["Precio"]."</br>" .$Juegos["ID_Juego"]."</br>". $Juegos["Genero"]> . '</li>'");
 
-      return $Juegos
-      }
-    }
+      //return $Juegos
 
+}
   function GetGeneros()  {
     $sentencia= $this->db->prepare("SELECT * FROM genero");
     $sentencia->execute();
     $Genero = $sentencia->fetchAll(PDO::FETCH_ASSOC);
-    echo ('<li class="list-group-item">'."Numero de 'ID': ". $Genero["ID_Genero"]."</br>"."Genero: ".$Genero["Genero"]. "</li>");
+  //  echo ('<li class="list-group-item">'."Numero de 'ID': ". $Genero["ID_Genero"]."</br>"."Genero: ".$Genero["Genero"]. "</li>");
 
 
-    return $Genero;
+  //  return $Genero;
   }
 
 function InsertarJuego(){
@@ -66,7 +63,7 @@ function BorrarJuego($ID_Juego){
      header("Location:  http://".$_SERVER["SERVER_NAME"]. dirname($_SERVER["PHP_SELF"]));
       }
 
-function EditarJuego(){
+function EditarJuego($Titulo,$ID_Genero,$Descripcion,$Precio,$Consola,$ID_Juego){
         $Titulo =  isset($_GET["inputTITULOedit"]);
         $Descripcion = isset($_GET["inputDESCRIPCIONedit"]);
         $Precio = isset($_GET["inputPRECIOedit"]);
@@ -80,7 +77,7 @@ function EditarJuego(){
         header("Location:  http://".$_SERVER["SERVER_NAME"]. dirname($_SERVER["PHP_SELF"]));
       }
 
-function EditarGenero(){
+function EditarGenero($Genero,$ID_Genero){
 
       $ID_Genero=$_GET['inputGENEROedit'];
       $Genero=$_GET['GenerodelJuego'];

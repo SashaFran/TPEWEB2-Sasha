@@ -1,15 +1,16 @@
 <?php
 
 
-class ConfigApp{
+class ConfigApp
+{
 
   public static $ACTION = 'action';
   //consatnte action ; todo en la url es una accion: editar, borrar, etc
     public static $PARAMS = 'params';
     //parametros son las tareas: borrar/3.
-      public static $ACTION = [
+      public static $ACTIONS = [
         //lista de action segun la accion, si va a Home, tra el index.
-        ' '=> 'Indexcontroller#Home'
+        ' '=> 'Indexcontroller#Home',
         ' '=> 'AdmiController#Home',
         'index'=> 'AdmiController#TraerHome',
         'Borrar'=> 'AdmiController#BorrarJuego',
