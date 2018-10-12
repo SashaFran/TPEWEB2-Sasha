@@ -11,7 +11,7 @@ class ConfigApp
       public static $ACTIONS = [
         //lista de action segun la accion, si va a Home, tra el index.
         ' '=> 'Indexcontroller#Home',
-        ' '=> 'AdmiController#Home',
+        'Administrador'=> 'AdmiController#Home',
         'index'=> 'AdmiController#TraerHome',
         'Borrar'=> 'AdmiController#BorrarJuego',
         //esta borrar? dividilo en 2, traeme el metodo y el parametro
@@ -20,6 +20,8 @@ class ConfigApp
         'EditarGenero'=> 'AdmiController#EditarGenero',
         'AgregarGenero'=> 'AdmiController#AgregarGenero',
         'BorrarGenero'=> 'AdmiController#BorrarGenero',
+      //  'Login'=>'LoginController#VerificarLogin',
+        'VerificarLogin'=> 'LoginController#VerificarLogin',
       ];
 
 }

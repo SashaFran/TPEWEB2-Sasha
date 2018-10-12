@@ -1,5 +1,5 @@
 <?php
-echo phpinfo();
+//echo phpinfo();
 require_once('libs/Smarty.class.php');
 
 

@@ -5,6 +5,7 @@ define('PARAMS', 1);
 
 require_once "Config/ConfigApp.php";
 require_once "Controller/AdmiController.php";
+require_once "Controller/LoginController.php";
 
 function parseURL($url){
   //"Parse": Analisala y devolveme algo

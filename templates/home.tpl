@@ -1,4 +1,4 @@
-{include file="Header.tpl"}
+{include file="Header.tpl"};
 
 
   <div class="Navegador">
@@ -32,9 +32,9 @@
    <div class="dropdown">
  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Sign In</i> </button>
  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-   <form action="./View/AdmiView.php" method="get">
-   <li>Documento: <input id="input" type="number" name="Documento" /></li>
-   <li>Contraseña: <input type="text" name="Contraseña" /></li>
+   <form action="VerificarLogin" method="post">
+   <li>Usuario: <input  type="number" name="Usuario" /></li>
+   <li>Contraseña: <input  type="text" name="Contraseña" /></li>
    <li><input type="submit" value="Sign in"></li>
  </div>
 </div>

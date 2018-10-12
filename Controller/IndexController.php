@@ -1,15 +1,15 @@
 <?php
 
-require_once "../view/IndexView.php"
+require_once "../view/IndexView.php";
 //solicita IndexView ya que vamos a trabajar en paralelo
-require_once  "../Model/IndexModel.php"
+require_once  "../Model/IndexModel.php";
 
 class Indexcontroller
 {
   private $view;
   //variable view
   private $model;
-  private $Titulo = "Venta de VideoJugos";
+  private $Titulo;
   //declaramos la variable aca, donde aparece en el Index
   function __construct()
   {
@@ -18,7 +18,7 @@ class Indexcontroller
     //yo objeto, busca mi propiedad View
     $this->model = new IndexModel();
     //inicializacion de model
-    $this->Titulo = "Venta de VideoJuegos"
+    $this->Titulo = "Venta de VideoJuegos";
     //yo, objeto! Busca mi propiedad.
   }
 
