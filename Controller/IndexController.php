@@ -23,9 +23,8 @@ class Indexcontroller
   }
 
   function Home(){
-//use PartialRender, por consguiente mi index no tiene variables extras.
-    $this->view->Mostrar($this->Titulo,$Generos);
-    $Generos = $this->model->GetGeneros()
+    $this->view->Mostrar($this->Titulo);
+    $Generos = $this->model->GetGeneros();
   }
 
 
