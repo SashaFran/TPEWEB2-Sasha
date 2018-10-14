@@ -11,7 +11,7 @@ class AdmiView
     $smarty->assign('Juegos', $Juegos);
     $smarty->assign('Genero', $Genero);
     //$smarty->debugging = true;
-
+//balbalba
     $smarty->display('templates/Admin.tpl');
 }
 }
