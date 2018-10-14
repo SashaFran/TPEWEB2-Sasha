@@ -3,7 +3,7 @@
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -l
   RewriteRule ^[css|img|js].*$ - [L]
-
+	rewriteRule ^api/(.*) api/RouteAdvance.php?resource=$1 [QSA,L]
 
   RewriteRule ^(.*)$ RouteAdvance.php?action=$1 [QSA,L]
 </IfModule>

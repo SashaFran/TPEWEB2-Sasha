@@ -13,7 +13,7 @@ class ConfigApp
     //parametros son las tareas: borrar/3.
       public static $ACTIONS = [
         //lista de action segun la accion, si va a Home, tra el index.
-        ' '=> 'Indexcontroller#Home',
+        ''=> 'Indexcontroller#Home',
 
         'Home'=> 'Indexcontroller#Home',
 
