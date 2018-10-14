@@ -4,10 +4,8 @@ define('RESOURCE', 0);
 define('PARAMS', 1);
 
 require_once "Config/ConfigApp.php";
-require_once "Config/ConfigApi.php";
-require_once "Controller/AdmiController.php";
-require_once "Controller/LoginController.php";
-require_once "Controller/SecuredController.php";
+require_once "Controller/ApiController.php";
+
 
 function parseURL($url){
   //"Parse": Analisala y devolveme algo
@@ -30,7 +28,7 @@ if(isset($_GET['resource'])){
     $urlData = parseURL($_GET['resource']);
     $resource = $urlData[ConfigApp::$RESOURCE]; //home?
 
-if(array_key_exists($resource,ConfigApp::$RESOURCE)){
+if(array_key_exists($resource,ConfigApp::$RESOURCES)){
 //si en array de actiones, existe esa action: hace algo. (configApp)
   $params = $urlData [ConfigApp::$PARAMS];
   //parametros que voy a pasar
