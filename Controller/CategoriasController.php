@@ -17,7 +17,7 @@ class Categoriascontroller
     //yo objeto, busca mi propiedad View
     $this->model = new IndexModel();
     //inicializacion de model
-    $this->Titulo = "Venta de VideoJuegos"
+    $this->Titulo = "Venta de VideoJuegos";
     //yo, objeto! Busca mi propiedad.
   }
       function Home(){

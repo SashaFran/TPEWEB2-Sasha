@@ -1,5 +1,5 @@
-{include file="Header.tpl"}
-
+{include file="header.tpl"}
+<body>
   <div class="Principio">
   </div>
   <div class="Navegador">
@@ -182,4 +182,4 @@
 </div>
 </div>
 </br>
-{include file="Footer.tpl"}
+{include file="footer.tpl"}
