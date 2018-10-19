@@ -21,6 +21,10 @@ class ConfigApp
 
         'index'=> 'AdmiController#TraerHome',
 
+        'Filtro'=>'IndexController#Controlador',
+
+        'VerificarLogin'=> 'LoginController#VerificarLogin',
+
         'Borrar'=> 'AdmiController#BorrarJuego',
         //esta borrar? dividilo en 2, traeme el metodo y el parametro
 
@@ -37,7 +41,7 @@ class ConfigApp
         'Logout'=> 'LoginController#logout',
         //  'Login'=>'LoginController#VerificarLogin',
 
-        'VerificarLogin'=> 'LoginController#VerificarLogin',
+        'MostrarDetalle'=>'IndexController#MostrarDetalle',
       ];
 
 }

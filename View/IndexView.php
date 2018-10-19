@@ -5,16 +5,32 @@ require_once('libs/Smarty.class.php');
  //igual al archivo
 class IndexView {
 
-  function Mostrar($Titulo){
+  function Home($Juegos, $Genero, $GetAll, $Categoria, $Detalle){
       //$Titulo = "Venta de VideoJugos";
       $smarty = new Smarty();
-      $smarty->assign('Titulo', $Titulo);
-      //aca deberia estar los juegos pero partialRender.
-      //$smarty->assign(' ', $);
+      //$smarty->assign('Titulo', $Titulo);
+      $smarty->assign('Juego', $Juegos);
+      $smarty->assign('Genero', $Genero);
+      $smarty->assign('GetAll', $GetAll);
+      $smarty->assign('Categorias',$Categoria);
+      $smarty->assign('Detalle',$Detalle);
     //  $smarty->debugging = true;
 
       $smarty->display('templates/home.tpl');
   }
+  function Mostrar($Juegos, $Genero, $GetAll, $Categoria, $Detalle){
+      //$Titulo = "Venta de VideoJugos";
+      $smarty = new Smarty();
+      //$smarty->assign('Titulo', $Titulo);
+      $smarty->assign('Juego', $Juegos);
+      $smarty->assign('Genero', $Genero);
+      $smarty->assign('GetAll', $GetAll);
+      $smarty->assign('Categorias',$Categoria);
+      $smarty->assign('Detalle',$Detalle);
+    //  $smarty->debugging = true;
+
+      $smarty->display('templates/home.tpl');
+}
 }
 
  ?>

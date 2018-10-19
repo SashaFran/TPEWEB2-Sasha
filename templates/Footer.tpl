@@ -1,9 +1,9 @@
 <div class="footer">
 <nav class="nav nav-pills nav-fill">
   <p class="nav-item nav-link" class="pie">Siguenos en nuestras redes sociales: </p>
-  <a class="nav-item nav-link" class="pie" href="http://facebook.com">Facebook <img src="Image/Facebook.png" id="Redsocial"/></a>
-  <a class="nav-item nav-link" class="pie" href="http://twitter.com">Twitter <img src="Image/Twitter.jpg" id="Redsocial"/></a>
-  <a class="nav-item nav-link" class="pie" href="http://Instagram.com">Instagram <img src="Image/Instagram.png" id="Redsocial"/></a>
+  <a class="nav-item nav-link" class="pie" href="http://facebook.com">Facebook <img src="image/Facebook.png" id="Redsocial"/></a>
+  <a class="nav-item nav-link" class="pie" href="http://twitter.com">Twitter <img src="image/Twitter.jpg" id="Redsocial"/></a>
+  <a class="nav-item nav-link" class="pie" href="http://Instagram.com">Instagram <img src="image/Instagram.png" id="Redsocial"/></a>
 </nav>
 </div>
 <script src="JS/PartialRender.js"></script>

@@ -7,24 +7,28 @@ class IndexModel{
 
 function __construct()
   {
-  $this->db = $this->Connect();
+  $this->db = new PDO('mysql:host=localhost;' . 'dbname=videojuegos;charset=utf8' , 'root' , '');
   }
 
   //se coneecta, hace la consulta y retorna los juegos
-private function Connect()
-  {
-  return new PDO('mysql:host=localhost;' . 'dbname=videojuegos;charset=utf8' , 'root' , '');
-  }
+
+  function Mostrar($Titulo){
+    $Titulo = "Venta de VideoJugos";
+
+
+  return $Titulo;
+}
 
 Function GetJuegos(){
-      $db = Connect();
+
       $Titulo = "Bienvenido Administrador: ";
-      $sentencia = $db->prepare( "SELECT * FROM juego");
+      //explicacion
+      $sentencia = $this->db->prepare( "SELECT juego.*, genero.* from juego, genero where juego.ID_Genero = genero.ID_Genero");
       $sentencia -> execute();
       $Juegos = $sentencia->fetchAll(PDO::FETCH_ASSOC);
       //echo ('<li class="list-group-item">'."Numero de 'ID': ". $Juegos["ID_Juego"]."</br>" ."Titulo: " . $Juegos["Titulo"]."</br>" . "Descripcion: ". $Juegos["Descripcion"]."</br>"."Precio: $" . $Juegos["Precio"]."</br>" .$Juegos["ID_Juego"]."</br>". $Juegos["Genero"]> . '</li>'");
 
-      //return $Juegos
+      return $Juegos;
 
 }
   function GetGeneros()  {
@@ -34,9 +38,9 @@ Function GetJuegos(){
   //  echo ('<li class="list-group-item">'."Numero de 'ID': ". $Genero["ID_Genero"]."</br>"."Genero: ".$Genero["Genero"]. "</li>");
 
 
-  //  return $Genero;
+    return $Genero;
   }
-
+//POST no necesita parametros
 function InsertarJuego(){
 
       $Titulo =  isset($_POST["inputTITULO"]);
@@ -56,11 +60,7 @@ function BorrarJuego($ID_Juego){
       $db = Connect();
       $sentencia = $db->prepare( "DELETE FROM juego where ID_Juego=?");
       $sentencia -> execute(array($idJuego,$ID_Juego));
-
-      //  if(['check1'] == true){
-        //  BorrarJuego();
-        //}
-     header("Location:  http://".$_SERVER["SERVER_NAME"]. dirname($_SERVER["PHP_SELF"]));
+      header("Location:  http://".$_SERVER["SERVER_NAME"]. dirname($_SERVER["PHP_SELF"]));
       }
 
 function EditarJuego($Titulo,$ID_Genero,$Descripcion,$Precio,$Consola,$ID_Juego){
@@ -77,29 +77,44 @@ function EditarJuego($Titulo,$ID_Genero,$Descripcion,$Precio,$Consola,$ID_Juego)
         header("Location:  http://".$_SERVER["SERVER_NAME"]. dirname($_SERVER["PHP_SELF"]));
       }
 
-function EditarGenero($Genero,$ID_Genero){
+function EditarGenero($Generos,$ID_Genero){
 
-      $ID_Genero=$_GET['inputGENEROedit'];
-      $Genero=$_GET['GenerodelJuego'];
+      $ID_Genero = $_GET['inputGENEROedit'];
+      $Generos = $_GET['GenerodelJuego'];
       $sentencia = $this->db->prepare("UPDATE genero set Genero=? where ID_Genero=?");
-      $sentencia->execute(array ($Genero,$ID_Genero));
+      $sentencia->execute(array ($Generos, $ID_Genero));
       header("Location:http://".$_SERVER["SERVER_NAME"]. dirname($_SERVER["PHP_SELF"]));
 }
 
+//POST no necesita parametros
 function AgregarGenero(){
 
-  $Genero=$_GET['inputGENEROagregar'];
+  $Generos = $_GET['inputGENEROagregar'];
   $sentencia = $this->db->prepare("INSERT INTO genero (Genero) VALUES (?)");
-  $sentencia->execute (array ($Genero));
+  $sentencia->execute (array ($Generos));
   header("Location:http://".$_SERVER["SERVER_NAME"]. dirname($_SERVER["PHP_SELF"]));
 }
 
-function BorrarGenero(){
-  $Genero=$_GET['inputGENEROagregar'];
+function BorrarGenero($Generos){
+  $Generos = $_GET['inputGENEROagregar'];
   $sentencia = $this->db->prepare("DELETE FROM Genero where genero=?");
-  $sentencia -> execute(array ($Genero));
+  $sentencia -> execute(array ($Generos));
   header("Location:http://".$_SERVER["SERVER_NAME"]. dirname($_SERVER["PHP_SELF"]));
 }
+
+function GetDetalle($ID){
+  //explicacion
+  $sentencia = $this->db->prepare("SELECT juego.*, genero . Genero from juego, genero where juego . ID_Juego = ? and juego . ID_Genero = genero . ID_Genero");
+  $sentencia->execute(array($ID));
+  return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function FiltroGen($Categoria){
+  $sentencia= $this->db->prepare("SELECT juego.*, genero . Genero from juego, genero WHERE  juego . ID_Genero = ? and juego . ID_Genero = genero . ID_Genero");
+  $sentencia->execute(array($Categoria));
+  return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+}
+
 }
 
  ?>

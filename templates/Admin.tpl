@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+{include file="Header.tpl"}
 <body>
   <div class="Principio">
   </div>
@@ -11,12 +11,9 @@
     <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Categoria </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Accion</a>
-    <a class="dropdown-item" href="#">Aventura</a>
-    <a class="dropdown-item" href="#">Terror</a>
-  <!--{foreach from=$generos item=genero}
-     <a class="dropdown-item" href="#" value="{$genero['ID_Genero']}">  {genero['Genero']}  </a>
-   {/foreach} -->
+  {foreach from=$generos item=genero}
+     <a class="dropdown-item" href="#" value="{$genero['ID_Genero']}">  {$genero['Genero']}  </a>
+   {/foreach}
     <a class="dropdown-item" href="#" id="Traertodo">Traer todo</a>
   </div>
 </div>
@@ -85,7 +82,7 @@
           <select class="filtro" name="inputGENERO">
             <option selected>Selecciona...</option>
              {foreach from=$generos item=genero}
-              <option value="{$genero['ID_Genero']}">  {genero['Genero']}  </opcion>
+              <option value="{$genero['ID_Genero']}">  {$genero['Genero']}  </opcion>
             {/foreach}
            </select>
       </div>

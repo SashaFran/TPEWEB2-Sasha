@@ -3,6 +3,7 @@
 require_once "./Model/IndexModel.php";
 require_once "./view/AdmiView.php";
 require_once "./Controller/SecuredController.php";
+require_once "./Controller/IndexController.php";
 //define('Administrador', 'Location:  http://".$_SERVER["SERVER_NAME"]'. dirname($_SERVER["PHP_SELF"]. '/Administrador'));
 //define('Home', 'Location:  http://".$_SERVER["SERVER_NAME"]'. dirname($_SERVER["PHP_SELF"]));
 //define('Logout', 'Location:  http://".$_SERVER["SERVER_NAME"]'. dirname($_SERVER["PHP_SELF"]). '/logout');
@@ -34,7 +35,7 @@ class AdmiController extends SecuredController
       function Home(){
         //agarra cookkie, id, envia la consulta y vuelve
 
-          $this->view->MostrarAdmiView($this->Titulo);
+          $this->view->MostrarAdmiView($this->Titulo,$Juegos,$Genero);
 
 }
     function TraerHome(){
